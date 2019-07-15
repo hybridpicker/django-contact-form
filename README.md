@@ -3,6 +3,11 @@ Django Contact Form with Google Recaptcha v3 - integration.
 
 # Instructions:
 
+For finding Templates add this line into TEMPLATES in **settings.py**:
+```python
+'DIRS': [os.path.join(BASE_DIR, 'templates')],
+```
+
 To setup Email and Recaptcha just paste this code with your keys in settings.py:
 
 ```python
