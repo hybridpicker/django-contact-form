@@ -11,6 +11,7 @@ from django.contrib import messages
 
 def emailView(request):
     form = ContactForm(request.POST)
+    key = settings.RECAPTCHA_SITE_KEY
     if form.is_valid():
         secret_key = settings.RECAPTCHA_SECRET_KEY
         data = {
@@ -59,7 +60,7 @@ def emailView(request):
             'site_key': settings.RECAPTCHA_SITE_KEY,
         }
         return redirect('success_contact')
-    return render(request, "contact/email.html", {'form': form})
+    return render(request, "contact/email.html", {'form': form, 'key':key})
 
 def successView(request):
     return render(request, "contact/success.html")

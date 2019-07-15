@@ -22,9 +22,3 @@ EMAIL_HOST_PASSWORD = 'swordfish'
 RECAPTCHA_SITE_KEY = ""
 RECAPTCHA_SECRET_KEY = ""
 ```
-
-Finally copy your Site Key into the recaptcha script in **contact/email.html**:
-
-```html
-<script src='https://www.google.com/recaptcha/api.js?render=RECAPTCHA_SITE_KEY'></script>
-```
