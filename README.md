@@ -1,2 +1,2 @@
 # django-contact-form
-Django Contact Form with optional Recaptcha v3
+Django Contact Form with Google Recaptcha v3 - integration.
