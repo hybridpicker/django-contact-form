@@ -13,7 +13,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'foo@gfoo.com'
 EMAIL_HOST_PASSWORD = 'swordfish'
 
-# Pute here your site Recaptcha Site Key #
+# Recaptcha Key's #
 RECAPTCHA_SITE_KEY = ""
 RECAPTCHA_SECRET_KEY = ""
 ```
