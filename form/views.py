@@ -12,25 +12,25 @@ from django.contrib import messages
 def emailView(request):
     form = ContactForm(request.POST)
     if form.is_valid():
-    #    secret_key = settings.RECAPTCHA_SECRET_KEY
-    #    data = {
-    #    'response': request.POST.get('g-recaptcha-response'),
-    #    'secret': secret_key
-    #    }
-    #    url = 'https://www.google.com/recaptcha/api/siteverify'
-    #    data = urllib.parse.urlencode(data).encode()
-    #    req = urllib.request.Request(url, data=data)
+        secret_key = settings.RECAPTCHA_SECRET_KEY
+        data = {
+        'response': request.POST.get('g-recaptcha-response'),
+        'secret': secret_key
+        }
+        url = 'https://www.google.com/recaptcha/api/siteverify'
+        data = urllib.parse.urlencode(data).encode()
+        req = urllib.request.Request(url, data=data)
 
         # verify the token submitted with the form is valid
-    #    response = urllib.request.urlopen(req)
-    #    result = json.loads(response.read().decode())
+        response = urllib.request.urlopen(req)
+        result = json.loads(response.read().decode())
 
         # result will be a dict containing 'success' and 'action'.
         # it is important to verify both
 
-    #    if (not result['success']) or (not result['action'] == 'submit'):
-    #        messages.error(request, 'Invalid reCAPTCHA. Please try again.')
-    #        return HttpResponse('Invalid reCAPTCHA. Please try again')
+        if (not result['success']) or (not result['action'] == 'submit'):
+            messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+            return HttpResponse('Invalid reCAPTCHA. Please try again')
 
         # end captcha verification
         first_name = form.cleaned_data['first_name']
@@ -50,7 +50,6 @@ def emailView(request):
             'today': today,
             'from_email': from_email,
         }
-        print(context)
         try:
             contact_mail(from_email, subject, message, context)
         except BadHeaderError:
