@@ -1,0 +1,6 @@
+certifi
+Django
+powerline-status
+psycopg2
+pytz
+sqlparse

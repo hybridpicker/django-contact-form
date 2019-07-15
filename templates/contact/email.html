@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load i18n static %}
+
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- Recaptcha -->
+  <script src='https://www.google.com/recaptcha/api.js?render=KEY'></script>
+</head>
+<body>
+  <div class="mbs">
+    <div class="container">
+      <h1>Contact Form</h1>
+      <form id="contact_form_post" method="post">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-8">
+            Please Select:
+          </div>
+          <div class="col-8">
+            <select name="gender" required>
+              <option value="1">-------</option>
+              <option value="1">{% trans 'Sir' %}</option>
+              <option value="2">{% trans 'Madame' %}</option>
+            </select>
+          </div>
+          <div class="col-4">
+            <p>First Name:</p>
+          </div>
+          <div class="col-8">
+            {{ form.first_name }}
+          </div>
+          <div class="col-4">
+            <p>Last Name:</p>
+          </div>
+          <div class="col-8">
+            {{ form.last_name }}
+          </div>
+          <div class="col-4">
+            <p>Email:</p>
+          </div>
+          <div class="col-8">
+            {{ form.from_email }}
+          </div>
+          <div class="col-4">
+            <p>Nachricht optional:</p>
+          </div>
+          <div class="col-8">
+            {{ form.message }}
+          </div>
+          <div class="col-8">
+            <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" value="">
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Senden</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  </html>
