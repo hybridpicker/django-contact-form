@@ -2,7 +2,7 @@
 Django Contact Form with Google Recaptcha v3 - integration.
 
 # How it looks:
-![contact_form_vid](https://user-images.githubusercontent.com/40589021/61306132-544d8e00-a7ec-11e9-8e0f-5a7cfeb29f68.gif)
+![django-contact-form-recaptcha](https://user-images.githubusercontent.com/40589021/61307204-341ece80-a7ee-11e9-8a60-4798068322f0.gif)
 
 # Install
 
