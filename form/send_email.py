@@ -1,5 +1,4 @@
 import re
-from django.core import mail
 from django.conf import settings
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
@@ -37,6 +36,7 @@ def contact_mail(from_email, subject, message, context, send_mail=True):
 
     if send_mail:
         # Sending Message to User
+        from django.core import mail
         mail.send_mail(subject, plain_message, from_email, [to], html_message=html_message)
         # Creating Mail to EMAIL_HOST_USER
         from_email = from_email = settings.EMAIL_HOST_USER
