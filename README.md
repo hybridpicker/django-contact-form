@@ -5,7 +5,7 @@ Django Contact Form with Google Recaptcha v3 - integration.
 
 Easy install with pip:
 ```python
-pip install django-contact-recaptcha
+pip install django-contact-recaptcha-v3
 ```
 
 Registering in **settings.py***
