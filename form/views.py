@@ -2,7 +2,7 @@ from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .forms import ContactForm
-from .email import contact_mail
+from .send_email import contact_mail
 import datetime
 from django.conf import settings
 import urllib
