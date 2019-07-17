@@ -7,11 +7,40 @@
   <title></title>
   <!-- Recaptcha -->
   <script src='https://www.google.com/recaptcha/api.js?render=6LfAm6kUAAAAAFy7phFkAoYO-hgwFC9tg2sYf4nk'></script>
+  <style media="screen">
+.container{
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 22rem;
+}
+form {
+  display: block;
+  margin-top: 0em;
+  padding-right: 1.5%;
+  padding-left: 1.5%;
+}
+input{
+  width: 100%;
+}
+select{
+  margin-top: 1rem;
+  width: 50%
+}
+textarea{
+  width: 100%;
+}
+button{
+  margin-top: 1rem;
+}
+  </style>
+
 </head>
 <body>
   <div class="mbs">
     <div class="container">
-      <h1>Contact Form</h1>
+      <h1>Drop us a line:</h1>
       <form id="contact_form_post" method="post">
         {% csrf_token %}
         <div class="row">
