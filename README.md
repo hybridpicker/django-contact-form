@@ -1,8 +1,6 @@
 # django-contact-form
 Django Contact Form with Google Recaptcha v3 - integration.
 
-## How it looks:
-![contact-form-vid-presentation](https://user-images.githubusercontent.com/40589021/61354422-6d991d80-a872-11e9-8e51-d88881a23523.gif)
 
 ## Install
 
@@ -61,3 +59,7 @@ RECAPTCHA_SECRET_KEY = ""
 ```
 
 6. Visit http://127.0.0.1:8000/contact/ to check the contact-form.
+
+
+## How it looks:
+![contact-form-vid-presentation](https://user-images.githubusercontent.com/40589021/61354422-6d991d80-a872-11e9-8e51-d88881a23523.gif)
